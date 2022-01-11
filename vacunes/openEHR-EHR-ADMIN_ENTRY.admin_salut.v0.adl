@@ -1,0 +1,222 @@
+archetype (adl_version=1.4; uid=4f97b171-cb0d-4d64-98c9-67b4a7175320)
+	openEHR-EHR-ADMIN_ENTRY.admin_salut.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2021-07-08">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"623fb2ddfaaf52e1bc692d2e7819d2b2">
+		["build_uid"] = <"d14d7281-4ea5-3747-977d-02c435687e79">
+	>
+
+definition
+	ADMIN_ENTRY[at0000] matches {    -- ADMIN_Salut
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					CLUSTER[at0003] occurrences matches {0..1} matches {    -- Entitats
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0021] occurrences matches {0..1} matches {    -- centre_solicita
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0022] occurrences matches {0..1} matches {    -- centre_realitza
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0020] occurrences matches {0..1} matches {    -- centre_custodia
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0023] occurrences matches {0..1} matches {    -- centre_publica
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0005] occurrences matches {0..1} matches {    -- UP_solicita
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0024] occurrences matches {0..1} matches {    -- UP_realitza
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0025] occurrences matches {0..1} matches {    -- UP_custodia
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0026] occurrences matches {0..1} matches {    -- UP_publica
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0006] occurrences matches {0..1} matches {    -- sa_solicita
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0027] occurrences matches {0..1} matches {    -- sa_realitza
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0028] occurrences matches {0..1} matches {    -- sa_custodia
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0029] occurrences matches {0..1} matches {    -- sa_publica
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0008] occurrences matches {0..1} matches {    -- informacio_origen
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0009] occurrences matches {0..1} matches {    -- codi_origen
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0010] occurrences matches {0..1} matches {    -- origen_admin
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0017] occurrences matches {0..1} matches {    -- edicio
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0018] occurrences matches {0..1} matches {    -- CPC
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0019] occurrences matches {0..1} matches {    -- tipus_accio
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"ADMIN_Salut">
+					description = <"ADMIN_Salut">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Entitats">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"UP_solicita">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"sa_solicita">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"informacio_origen">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"codi_origen">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"origen_admin">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"edicio">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"CPC">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"tipus_accio">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"centre_custodia">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"centre_solicita">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"centre_realitza">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"centre_publica">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"UP_realitza">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"UP_custodia">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"UP_publica">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"sa_realitza">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"sa_custodia">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"sa_publica">
+					description = <"">
+				>
+			>
+		>
+	>

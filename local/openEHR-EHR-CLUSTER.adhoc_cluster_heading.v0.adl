@@ -49,7 +49,7 @@ http://dcm.nehta.org.au/ckm#showArchetype_1013.1.1288_1 (discontinued).">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"a3eef15fb88ac8c4c9f7b18d1e791e79">
+		["MD5-CAM-1.0.1"] = <"eccbfde3fc5fd21eb6e4f3965fd7abeb">
 		["build_uid"] = <"45fe8c2c-067f-471b-87e5-84fc1bc771c4">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -57,7 +57,7 @@ http://dcm.nehta.org.au/ckm#showArchetype_1013.1.1288_1 (discontinued).">
 definition
 	CLUSTER[at0000] matches {    -- grup_poblacional
 		items cardinality matches {1..*; unordered} matches {
-			allow_archetype ITEM[at0002] occurrences matches {0..*} matches {    -- Content
+			allow_archetype ITEM[at0002] occurrences matches {0..*} matches {    -- Content test
 				include
 					archetype_id/value matches {/.*/}
 			}
@@ -78,7 +78,7 @@ ontology
 					description = <"A generic cluster heading for contextual renaming within a template.">
 				>
 				["at0002"] = <
-					text = <"Content">
+					text = <"Content test">
 					description = <"SLOT for Detailed Content.">
 				>
 				["at0003"] = <
@@ -94,7 +94,7 @@ ontology
 					description = <"Eine generische Clusterüberschrift zur kontextuellen Umbenennung innerhalb eines Templates.">
 				>
 				["at0002"] = <
-					text = <"Inhalt">
+					text = <"*Content test (en)">
 					description = <"SLOT für detaillierte Inhalte.">
 				>
 				["at0003"] = <
